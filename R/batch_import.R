@@ -11,6 +11,7 @@ batch_import <-
            row.skip = 0,
            ) {
     #list all relevant files that match the specified file type
+
     obs.file.list <- sapply(list.files(
       path = wd,
       pattern =  paste0('.', file.type),
