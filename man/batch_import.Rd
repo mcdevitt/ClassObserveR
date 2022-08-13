@@ -32,12 +32,12 @@ batch_import(
 
 \item{row.skip}{Enter the number of rows to skip during import. The following row (i.e., "row.skip" + 1) will used to specify column headers. By default, 0 is used so that row 1 is used to specify column headers.}
 
-\item{...}{Additional arguments from \link[?readxl:read_excel()]{read_excel} or \link[?base:read_csv()]{read_csv} can be passed through this function. However, this is not recommended when specifying a template.type other than "default".}
+\item{...}{Additional arguments from \code{\link[readxl:read_excel]{read_excel()}} or \code{\link[utils:read_csv]{read_csv()}} can be passed through this function. However, this is not recommended when specifying a template.type other than "default".}
 }
 \description{
 Select a folder on your machine and all files matching a specified file type (e.g., .csv or .xls/.xlsx) will be imported.
 Additional filtering can be made based on simple text patterns (e.g., all files that contain an instructor's name).
 The filepath will be appended to the dataframe and can be used with add_metadata() to add additional metadata about the classroom observation.
 Depending on the template used, column names may not import in a manner that is easily compatible with R (e.g., R does not like spaces and leading numbers within column names).
-The function clean_codes() and add_coding_scheme() can be used to reformat column names for optimal use in other ClassObserveR functions.
+The function \code{\link{clean_codes}} and add_coding_scheme() can be used to reformat column names for optimal use in other ClassObserveR functions.
 }
